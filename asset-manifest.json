@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.8d5d72a3.css",
-    "main.js": "./static/js/main.b229d22c.js",
+    "main.js": "./static/js/main.5e363659.js",
     "static/js/787.3f7dcd2a.chunk.js": "./static/js/787.3f7dcd2a.chunk.js",
     "static/media/the girl with down syndrome works at the store..jpg": "./static/media/the girl with down syndrome works at the store..9459d7a9ece90aa781a0.jpg",
     "static/media/hands.jpg": "./static/media/hands.3ca49aa3e7d74be18b9c.jpg",
@@ -49,11 +49,11 @@
     "static/media/down.svg": "./static/media/down.837875f996185e3a02f6c748aca7e17b.svg",
     "static/media/location-pin-alt-svgrepo-com.svg": "./static/media/location-pin-alt-svgrepo-com.ccef8bdb074cd0b93e526dd339123d60.svg",
     "main.8d5d72a3.css.map": "./static/css/main.8d5d72a3.css.map",
-    "main.b229d22c.js.map": "./static/js/main.b229d22c.js.map",
+    "main.5e363659.js.map": "./static/js/main.5e363659.js.map",
     "787.3f7dcd2a.chunk.js.map": "./static/js/787.3f7dcd2a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8d5d72a3.css",
-    "static/js/main.b229d22c.js"
+    "static/js/main.5e363659.js"
   ]
 }
