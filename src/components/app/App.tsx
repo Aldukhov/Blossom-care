@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import styles from './App.module.css'
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from '../header/Header';
 import Home from '../../pages/home/home';
 import Footer from '../footer/Footer';
@@ -42,6 +42,7 @@ const App: React.FC = () => {
           <Route path='/services/support-coordination' element={<SupportCoordination />} />
           <Route path='/services/transport' element={<Transport />} />
           <Route path='/ndis' element={<Ndis />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
       <Footer />
