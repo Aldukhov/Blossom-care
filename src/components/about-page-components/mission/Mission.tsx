@@ -3,13 +3,17 @@ import classNames from 'classnames';
 import styles from './Mission.module.css';
 import Button from '../../../components/button/button';
 import imgUrl from '../../../assets/images/about us/section.jpg';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../services/types';
 const Mission: React.FC = () => {
+
+    const activeGray = useSelector((state: RootState) => state.activeGray.active);
 
     return (
 
         <section className={classNames(styles['sbs-867'])}>
             <div className={classNames(styles['cs-container'])}>
-                <picture className={classNames(styles['cs-picture'])}>
+                <picture className={classNames(styles['cs-picture'],  activeGray && 'black-pic')}>
                     <img loading="lazy" decoding="async" src={imgUrl} alt="sectiob"/>
                 </picture>
                 <div className={classNames(styles['cs-content'])}>                    

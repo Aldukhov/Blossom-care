@@ -361,7 +361,7 @@
     .button-box-1483 .cs-wrapper {
       width: 3.25rem;
       height: 3.25rem;
-      border: 1px solid #F11D7C;
+      border: 1px solid var(--secondary);
       border-radius: 50%;
       display: flex;
       justify-content: center;

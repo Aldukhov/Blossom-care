@@ -1,37 +1,61 @@
-import React, { ReactEventHandler } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import styles from './Choose.module.css';
 import Button from '../../../components/button/button';
 import imageUrl from '../../../assets/images/home/hands.jpg'
 import directionSvg from '../../../assets/images/home/svg/direction.svg';
+import directionBlackSvg from '../../../assets/images/home/svg-black/directionBlack.svg';
+import targetBlackSvg from '../../../assets/images/home/svg-black/targetBlack.svg';
 import targetSvg from '../../../assets/images/home/svg/target.svg';
+import { useSelector} from 'react-redux'
+import { RootState } from '../../../services/types';
+
 
 const Choose: React.FC = () => {
- 
+    const activeGray = useSelector((state: RootState) => state.activeGray.active);
+
     return (
 
        
             <section className={classNames(styles["why-choose-1485"])}>
                 <div className={classNames(styles["cs-container"])}>
                     <div className={classNames(styles["cs-image-group"])}>
-                        <picture className={classNames(styles["cs-picture"], styles["cs-picture1"])}>
+                        <picture className={classNames(styles["cs-picture"], styles["cs-picture1"],  activeGray && 'black-pic')}>
                        
                             <img loading="lazy" decoding="async" src={imageUrl} alt="kid" width="647" height="600" />
                         </picture>
 
                         <svg className={classNames(styles["cs-mask"])} width="647" height="600" viewBox="0 0 647 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path className={classNames(styles["cs-outer-mask"])} fillRule="evenodd" clipRule="evenodd" d="M0 0H647V600H0V0ZM38 110C64.0297 75.766 102.579 52.0824 143 37C144.788 36.3365 146.555 35.5378 148.324 34.7378C150.529 33.7407 152.738 32.7417 155 32C251.273 0.380304 364.071 -8.26436 457 38C514.621 66.6831 553.453 118.152 591.339 168.368C596.562 175.29 601.767 182.188 607 189C657.382 254.558 650.888 352.089 614 422C585.347 476.308 539.036 519.481 487 552C403.358 604.274 320.729 610.296 236 554C116.994 474.921 -74.8032 258.339 38 110Z" fill="#FFF8F5" />
+                            <path className={classNames(styles["cs-outer-mask"])} fillRule="evenodd" clipRule="evenodd" d="M0 0H647V600H0V0ZM38 110C64.0297 75.766 102.579 52.0824 143 
+                            37C144.788 36.3365 146.555 35.5378 148.324 34.7378C150.529 
+                            33.7407 152.738 32.7417 155 32C251.273 0.380304 364.071 
+                            -8.26436 457 38C514.621 66.6831 553.453 118.152 591.339 
+                            168.368C596.562 175.29 601.767 182.188 607 189C657.382 
+                            254.558 650.888 352.089 614 422C585.347 476.308 539.036 
+                            519.481 487 552C403.358 604.274 320.729 610.296 236 554C116.994 
+                            474.921 -74.8032 258.339 38 110Z" fill="#FFF8F5" />
 
-                            <path className={classNames(styles["cs-mask-border"])} d="M609.578 419.667L614 422L609.578 419.667C645.882 350.863 651.85 255.566 603.035 192.047L603.035 192.046C597.763 185.184 592.537 178.261 587.308 171.335C549.335 121.032 511.26 70.5951 454.772 42.4761L454.772 42.476C363.478 -2.9739 252.173 5.34746 156.56 36.7504L156.558 36.7511C154.801 37.3273 153.023 38.1029 151.033 39.0003C150.82 39.0965 150.603 39.1945 150.384 39.2937C148.637 40.0841 146.708 40.9569 144.748 41.6845C104.889 56.5573 67.259 79.7797 41.9802 113.026L38 110L41.98 113.027C-12.5389 184.72 5.99713 273.442 54.3776 355.432C102.668 437.269 179.806 510.656 238.767 549.836C280.403 577.499 321.25 589.69 361.787 588.715C402.372 587.739 443.075 573.556 484.35 547.76C535.868 515.565 581.448 472.984 609.578 419.667Z" stroke="#F791B2" strokeWidth="10" />
+                            <path className={classNames(styles["cs-mask-border"])} d="M609.578 419.667L614 422L609.578 419.667C645.882 350.863 651.85 255.566 603.035 192.047L603.035 192.046C597.763 185.184 592.537 178.261 587.308 171.335C549.335 121.032 
+                            511.26 70.5951 454.772 42.4761L454.772 42.476C363.478 -2.9739 
+                            252.173 5.34746 156.56 36.7504L156.558 36.7511C154.801 37.3273 
+                            153.023 38.1029 151.033 39.0003C150.82 39.0965 150.603 39.1945 
+                            150.384 39.2937C148.637 40.0841 146.708 40.9569 144.748 
+                            41.6845C104.889 56.5573 67.259 79.7797 41.9802 113.026L38 110L41.98
+                             113.027C-12.5389 184.72 5.99713 273.442 54.3776 355.432C102.668
+                              437.269 179.806 510.656 238.767 549.836C280.403 577.499 
+                              321.25 589.69 361.787 588.715C402.372 587.739 443.075 
+                              573.556 484.35 547.76C535.868 515.565 581.448 472.984 
+                              609.578 419.667Z" strokeWidth="10" />
                         </svg>
                     </div>
+                    
                     <div className={classNames(styles["cs-content"])}>
                         <h2 className={classNames(styles["cs-title"], 'cs-title')}>Why Choose us</h2>
 
                         <ul className={classNames(styles["cs-ul"])}>
                             <li className={classNames(styles["cs-li"])}>
                                 <picture className={classNames(styles["cs-li-picture"])}>
-                                    <img className={classNames(styles["cs-li-icon"])} aria-hidden="true" src={directionSvg} decoding="async" alt="icon" width="36" height="36" loading="lazy" />
+                                    <img className={classNames(styles["cs-li-icon"])} aria-hidden="true" src={activeGray ? directionBlackSvg : directionSvg} decoding="async" alt="icon" width="36" height="36" loading="lazy" />
                                 </picture>
                                 <div className={classNames(styles["cs-flex"])}>
                                     <h3 className={classNames(styles["cs-h3"])}>Our Mission</h3>
@@ -43,7 +67,7 @@ const Choose: React.FC = () => {
                             </li>
                             <li className={classNames(styles["cs-li"])}>
                                 <picture className={classNames(styles["cs-li-picture"])}>
-                                    <img className={classNames(styles["cs-li-icon"])} aria-hidden="true" src={targetSvg} decoding="async" alt="icon" width="36" height="36" loading="lazy" />
+                                    <img className={classNames(styles["cs-li-icon"])} aria-hidden="true" decoding="async" alt="icon" src={activeGray ? targetBlackSvg : targetSvg} width="36" height="36" />
                                 </picture>
                                 <div className={classNames(styles["cs-flex"])}>
                                     <h3 className={classNames(styles["cs-h3"])}>Our Vision</h3>

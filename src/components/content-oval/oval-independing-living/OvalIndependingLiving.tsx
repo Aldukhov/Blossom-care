@@ -2,8 +2,14 @@ import React, { ReactEventHandler } from 'react';
 import styles from './OvalIndependingLiving.module.css';
 import classNames from 'classnames';
 import imgUrl from '../../../assets/images/services/independent living/man-in-hospital.jpg'
+import check from '../../../assets/images/svg/check.svg';
+import checkBlack from '../../../assets/images/svg/checkBlack.svg';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../services/types';
 
 const OvalIndependetLiving: React.FC = () => {
+
+    const activeGray = useSelector((state: RootState) => state.activeGray.active);
 
     return (
 
@@ -22,41 +28,41 @@ const OvalIndependetLiving: React.FC = () => {
 
                     <ul className={classNames(styles["cs-ul"])}>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Complex Bowel Care
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Enteral Feeding Support
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Dysphagia Support
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Ventilator Support
                         </li>
 
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Tracheostomy Support
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Urinary Catheter Support
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Subcutaneous Injections
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Complex Wound Care Support
                         </li>
 
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Epilepsy and Seizure Support – high risk
                         </li>
 
@@ -65,7 +71,7 @@ const OvalIndependetLiving: React.FC = () => {
 
                 </div>
                 <div className={classNames(styles['cs-image-group'])}>
-                    <picture className={classNames(styles['cs-picture'])}>
+                    <picture className={classNames(styles['cs-picture'],  activeGray && 'black-pic')}>
                        
                         <img decoding="async" src={imgUrl} alt="Man Using Mobile Phone In Hospital" aria-hidden="true" />
                     </picture>

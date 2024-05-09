@@ -2,15 +2,21 @@ import React, { ReactEventHandler } from 'react';
 import styles from './recLivingOptions.module.css';
 import classNames from 'classnames';
 import  imgUrl from '../../../assets/images/services/living options/Entering-the-New-House.jpg'
+import check from '../../../assets/images/svg/check.svg';
+import checkBlack from '../../../assets/images/svg/checkBlack.svg';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../services/types';
 
 const RecLivingOptions: React.FC = () => {
+
+    const activeGray = useSelector((state: RootState) => state.activeGray.active);
 
     return (
         <section className={classNames(styles["content-page-1399"])}>
             <div className={classNames(styles["cs-container"])}>
                 <div className={classNames(styles["cs-image-group"])}>
                     <div className={classNames(styles["cs-flex"])}>
-                        <picture className={classNames(styles["cs-background"])}>
+                        <picture className={classNames(styles["cs-background"],  activeGray && 'black-pic')}>
                             <img loading="lazy" decoding="async" src={imgUrl} alt="Happy group of friends of different ethnicities is entering the new house" style={{objectPosition: 'bottom'}}/>
                         </picture>
 
@@ -37,23 +43,23 @@ const RecLivingOptions: React.FC = () => {
 
                     <ul className={classNames(styles["cs-ul"])}>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Our job is to make your life easier.
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Experience childcare as it should be.
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             We are childcare professionals.
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Digital Clean Checklist Prepared New Year
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Babysitting with immense love and care.
                         </li>
                     </ul>

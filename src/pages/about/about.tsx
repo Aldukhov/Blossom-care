@@ -6,8 +6,8 @@ import ACTA from '../../components/about-page-components/cta/ACTA';
 import Stats from '../../components/about-page-components/stats/Stats';
 import Form from '../../components/form/Form';
 import imgUrl from '../../assets/images/about us/header.jpg'
-import experience from '../../assets/images/about us/svg/experience-information-knowledge-svgrepo-com.svg';
-import location from '../../assets/images/about us/svg/location-pin-alt-svgrepo-com.svg';
+
+
 const About: React.FC = () => {
 
     

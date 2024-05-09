@@ -17,6 +17,7 @@
         position: absolute;
         left: 0;
         bottom: 99%;
+        fill: var(--backgroundColor);
     }
     .cs-footer-842 .cs-container {
         width: 100%;
@@ -95,7 +96,7 @@
     }
 
     .cs-footer-842 .cs-header {
-        font-size: 1.25rem;
+        font-size: var(--contactHeader);
         line-height: 1.5em;
         font-weight: 700;
         margin: 0 0 1.25rem 0;

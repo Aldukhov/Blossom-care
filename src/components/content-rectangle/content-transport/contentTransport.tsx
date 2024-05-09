@@ -2,15 +2,21 @@ import React, { ReactEventHandler } from 'react';
 import styles from '../ContentOval.module.css';
 import classNames from 'classnames';
 import imgUrl from '../../../assets/images/services/transport/the man helps old man.jpg';
+import check from '../../../assets/images/svg/check.svg';
+import checkBlack from '../../../assets/images/svg/checkBlack.svg';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../services/types';
 
 const ContentTransport: React.FC = () => {
 
+    const activeGray = useSelector((state: RootState) => state.activeGray.active);
+    
     return (
         <section className={classNames(styles["content-page-1399"])}>
             <div className={classNames(styles["cs-container"])}>
                 <div className={classNames(styles["cs-image-group"])}>
                     <div className={classNames(styles["cs-flex"])}>
-                        <picture className={classNames(styles["cs-background"])}>
+                        <picture className={classNames(styles["cs-background"],  activeGray && 'black-pic')}>
                             <img loading="lazy" decoding="async" src={imgUrl} alt="Senior man going to in his wheelchair outside"/>
                         </picture>
 
@@ -32,19 +38,19 @@ const ContentTransport: React.FC = () => {
 
                     <ul className={classNames(styles["cs-ul"])}>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Safe
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Reliable
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Dealing with your providers to keep you on track
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             On Time
                         </li>
 

@@ -12,9 +12,12 @@ import mailSvg from '../../assets/images/svg/mail.svg';
 import logo from '../../assets/images/svg/logo_with_Shadow.svg';
 import facebookSvg from '../../assets/images/svg/facebook.svg';
 import instagramSvg from '../../assets/images/svg/instagram.svg';
+import logoBlack from '../../assets/images/svg/logo_with_Shadow_black.svg';
 
 const Footer: React.FC = () => {
 
+    const activeGray = useSelector((state:RootState) => state.activeGray.active);
+    
     const activeLink = useSelector((state: RootState) => state.activeLink.activeLink);
     const dispatch = useDispatch();
 
@@ -39,13 +42,13 @@ const Footer: React.FC = () => {
         <footer className={styles["cs-footer-842"]}>
             {/*Wave grpahic*/}
             <svg className={styles["cs-wave"]} width="1920" height="188" viewBox="0 0 1920 188" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1920 45.8671C1835.33 45.8671 1715.47 60.6671 1549.2 104.534C1115.6 218.4 932.267 0.000366211 466.533 0.000366211C218.933 0.000366211 172.8 45.8671 0.133333 45.8671L0 187.934H1920V45.8671Z" fill="#FFF8F5" />
+                <path d="M1920 45.8671C1835.33 45.8671 1715.47 60.6671 1549.2 104.534C1115.6 218.4 932.267 0.000366211 466.533 0.000366211C218.933 0.000366211 172.8 45.8671 0.133333 45.8671L0 187.934H1920V45.8671Z" />
             </svg>
             <div className={styles["cs-container"]}>
                 {/* Logo Group */}
                 <div className={styles["cs-logo-group"]}>
                     <Link to="/" aria-label="go back to home" className={styles["cs-logo"]} onClick={() => handleLinkClick('/')}>
-                    <img src={logo} alt="logo" aria-hidden="true" decoding="async" height={50}/>
+                    <img src={activeGray? logoBlack: logo} alt="logo" aria-hidden="true" decoding="async" height={50}/>
                     </Link>
                     <div className={styles["cs-social"]}>
                         <a className={styles["cs-social-link"]} aria-label="visit facebook profile" href="https://www.facebook.com/profile.php?id=61556938885891">

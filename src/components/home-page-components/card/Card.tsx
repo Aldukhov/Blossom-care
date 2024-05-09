@@ -13,8 +13,9 @@ interface ICard {
     alt: string;
 }
 
-const Card: React.FC<ICard> = ({ img, header, link,alt }) => {
+const Card: React.FC<ICard> = ({ img, header, link, alt }) => {
 
+    const activeGray = useSelector((state: RootState) => state.activeGray.active);
     const dispatch = useDispatch();
 
     const navigate = useNavigate();
@@ -31,11 +32,11 @@ const Card: React.FC<ICard> = ({ img, header, link,alt }) => {
             <Link to={link} onClick={service}>
 
                 <div className={classNames(styles["cs-image-group"])}>
-                    <picture className={classNames(styles["cs-picture"])}>
+                    <picture className={classNames(styles["cs-picture"],  activeGray && 'black-pic')}>
 
                         <img loading="lazy" decoding="async"
                             src={img} alt={alt}
-                             aria-hidden="true" />
+                            aria-hidden="true" />
 
                     </picture>
 

@@ -1,15 +1,22 @@
 import React, { ReactEventHandler } from 'react';
 import styles from '../ContentOval.module.css';
 import classNames from 'classnames';
-import photo from '../../../assets/images/services/community participation/women-sitting-in-a-cafe.jpg'
+import photo from '../../../assets/images/services/community participation/women-sitting-in-a-cafe.jpg';
+import check from '../../../assets/images/svg/check.svg';
+import checkBlack from '../../../assets/images/svg/checkBlack.svg';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../services/types';
+
 const ContentCommunityParticipation: React.FC = () => {
+
+    const activeGray = useSelector((state: RootState) => state.activeGray.active);
 
     return (
         <section className={classNames(styles["content-page-1399"])}>
             <div className={classNames(styles["cs-container"])}>
                 <div className={classNames(styles["cs-image-group"])}>
                     <div className={classNames(styles["cs-flex"])}>
-                        <picture className={classNames(styles["cs-background"])}>
+                        <picture className={classNames(styles["cs-background"],  activeGray && 'black-pic')}>
                             <img loading="lazy" decoding="async" src={photo} alt="people" width="542" height="728" />
                         </picture>
 
@@ -35,28 +42,28 @@ const ContentCommunityParticipation: React.FC = () => {
 
                     <ul className={classNames(styles["cs-ul"])}>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Aid in participating in community events and joining groups
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Encouragement for engaging in the community and volunteering
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Encourage and assist with suitable work placement
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Assistance for transportation to community and social events
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Help in enhancing social skills and forming connections
                         </li>
 
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24" />
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
                             Support for peer mentoring and advocacy efforts
                         </li>
                     </ul>

@@ -38,7 +38,7 @@
 
 .cta-button {
   background-color: var(--primary);
-  color: #fff;
+  color: var(--bodyTextColorWhite);
 }
 
 .cta-button:before {
@@ -46,7 +46,7 @@
 }
 
 .cta-button:hover {
-  color: white;
+  color: var(--hoverButtonColor);
 }
 
 .link-button {

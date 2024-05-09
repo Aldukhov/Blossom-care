@@ -9,7 +9,7 @@ import heroImg from '../../assets/images/home/hands with hand.jpg';
 
 const Home: React.FC = () => {
 
-    const title = "Nurturing independence,mpowering choices & enriching lives.";
+    const title = "Nurturing independence, mpowering choices & enriching lives.";
     const alt = 'Caregiver holding hands elderly woman patient, help and care';
     return (
 
@@ -19,7 +19,6 @@ const Home: React.FC = () => {
                 <Hero title={title} imageUrl={heroImg} alt={alt} />
                 <Choose />
                 <Services />
-                <Reviews />
                 <CTA />
             
         </>

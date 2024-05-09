@@ -3,9 +3,12 @@ import styles from './ContactForm.module.css';
 import classNames from 'classnames';
 import Button from '../../button/button';
 import { sendEmail } from '../../../services/emailJs/emailJs';
-
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../services/types';
+import sydney from '../../../assets/images/contact us/Sydney.jpg'
 const ContactForm: React.FC = () => {
 
+    const activeGray = useSelector((state: RootState) => state.activeGray.active);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -80,11 +83,8 @@ const ContactForm: React.FC = () => {
                         )}
                     </form>
                 </div>
-                {/* Map Image, pin is made in the Figma then export as one image */}
-                <picture className={classNames(styles["cs-map"])}>
-                    <source media="(max-width: 600px)" srcSet="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png" />
-                    <source media="(min-width: 601px)" srcSet="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png" />
-                    <img decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map+pin.png" alt="map" width="610" height="425" aria-hidden="true" />
+                <picture className={classNames(styles["cs-map"],  activeGray && 'black-pic')}>
+                    <img decoding="async" src={sydney} alt="Downtown Sydney skyline in Australia" width="610" height="425" aria-hidden="true" />
                 </picture>
             </div>
         </section>

@@ -6,12 +6,15 @@
     --headerColor: #1a1a1a;
     --bodyTextColor: #1a1a1a;
     --bodyTextColorWhite: #fafbfc;
+    --hoverButtonColor: #fafbfc;
     --backgroundColor: #FFF8F5;
+
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
     --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
     --bodyFontSize: 1rem;
+    
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 
@@ -32,9 +35,10 @@
     --inputSmallText: clamp(0.875rem, 1.5vw, 1rem);
 
     --contactHeader: 1.25rem;
-    
-}
 
+   
+   
+}
 
 @font-face {
     font-family: 'OpenSans';
@@ -69,6 +73,10 @@
     font-style: normal;
     font-weight: 600;
     src: url("../src/assets/fonts/Semibold/OpenSans-Semibold.woff") format("woff");
+}
+
+.black-pic {
+    filter: grayscale(100%);
 }
 
 html,
