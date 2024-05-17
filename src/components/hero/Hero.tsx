@@ -12,6 +12,7 @@ interface HeroProps {
     alt: string;
 }
 
+
 const Hero: React.FC<HeroProps> = ({ title, imageUrl, style,alt }) => {
 
     const isContactPage = window.location.pathname === '/contact-us';
@@ -25,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({ title, imageUrl, style,alt }) => {
                     <h1 className={classNames(styles["cs-title"])}>
                         {title}
                     </h1>
-                    {!isContactPage && <Button text="Get Started" link="/contact-us" extraClass='cta-button' />}
+                    {!isContactPage && <Button text="Get Started" link="/contact-us" extraClass='cta-button'/>}
                 </div>
             </div>
             

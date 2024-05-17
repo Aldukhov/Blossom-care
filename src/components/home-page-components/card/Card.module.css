@@ -45,8 +45,8 @@
     .cs-picture {
       position: relative;
       display: block;
-      width: 100%;
-      height: 100%;
+      height: 97%;
+      width: 97%;
       /* clips the image from overflowing parent on hover */
       overflow: hidden;
     }

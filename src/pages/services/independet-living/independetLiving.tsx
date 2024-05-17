@@ -5,7 +5,7 @@ import ContentIndepLiving from '../../../components/content-rectangle/content-in
 import ACTA from '../../../components/about-page-components/cta/ACTA';
 import OvalIndependetLiving from '../../../components/content-oval/oval-independing-living/OvalIndependingLiving';
 import imgUrl from '../../../assets/images/services/independent living/happy-disabled-man.jpg'
-
+import { Helmet } from 'react-helmet-async';
 
 const IndependetLiving: React.FC = () => {
 
@@ -16,6 +16,9 @@ const IndependetLiving: React.FC = () => {
 
         
         <>
+        <Helmet>
+                <title>{title}</title>
+            </Helmet>
             <Hero title={title} imageUrl={imgUrl} alt = {alt}/>
             <ContentIndepLiving />
             <ACTA/>

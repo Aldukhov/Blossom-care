@@ -17,7 +17,7 @@ const SSupportCoordination: React.FC = () => {
         <section className={classNames(styles["services-1267"])}>
             <div className={classNames(styles["cs-container"])}>
                 <div className={classNames(styles["cs-content"])}>
-                    <h2 className={classNames(styles["cs-title"], "cs-title")}>Plan Optimization</h2>
+                    <h2 className={classNames(styles["cs-title"], "cs-title")}>Plan Optimisation</h2>
                     <p className={classNames(styles["cs-text"], "cs-text")}>We know it can be a challenge to understand and take
                         advantage of everything included in your plan. We aim to ensure you benefit the most
                         from your NDIS plan to purse your needs and goals. We help develop and build your skills and confidence,

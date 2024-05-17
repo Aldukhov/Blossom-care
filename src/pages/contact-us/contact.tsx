@@ -4,6 +4,7 @@ import ContactForm from '../../components/contact-us-page-components/form/Contac
 import Faq from '../../components/contact-us-page-components/faq/Faq';
 import Info from '../../components/contact-us-page-components/conactInfo/ContactInfo';
 import imgUrl from '../../assets/images/contact us/hands holding a heart.jpg'
+import { Helmet } from 'react-helmet-async';
 const Contact: React.FC = () => {
 
     const title = "Contact us";
@@ -12,6 +13,9 @@ const Contact: React.FC = () => {
 
         
         <>
+        <Helmet>
+                <title>{title}</title>
+            </Helmet>
             <Hero title={title} imageUrl={imgUrl} alt = {'hands holding a heart'}/>
             <ContactForm />
         </>

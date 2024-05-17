@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../services/types';
 import { useNavigate, Link } from 'react-router-dom';
 import { setActiveLink } from '../../services/actions/activeLink';
-import ndisSvg from '../../assets/images/svg/I_heart_NDIS_2020.svg';
+import ndisSvg from '../../assets/images/svg/I Heart NDIS_2020.svg';
 import phoneSvg from '../../assets/images/svg/phone.svg';
 import mailSvg from '../../assets/images/svg/mail.svg';
 import logo from '../../assets/images/svg/logo_with_Shadow.svg';

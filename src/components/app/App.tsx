@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
-import styles from './App.module.css'
+import styles from './App.module.css';
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from '../header/Header';
 import Home from '../../pages/home/home';
@@ -25,27 +26,29 @@ const App: React.FC = () => {
 
   return (
     <>
-      <ScrollToTop />
-      <Header />
-      <main className={classNames(styles.app)}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact-us" element={<Contact />} />
-          <Route path="/services/community-nursing-care" element={<NursingCare />} />
-          <Route path="/services/community-participation" element={<CommunityParticipation />} />
-          <Route path="/services/dissability-accommodation" element={<Accommodation />} />
-          <Route path="/services/independent-living" element={<IndependetLiving />} />
-          <Route path='/services/individualised-living-options' element={<LinvingOptions />} />
-          <Route path='/services/plan-management' element={<PlanManagment />} />
-          <Route path='/services/support-coordination' element={<SupportCoordination />} />
-          <Route path='/services/transport' element={<Transport />} />
-          <Route path='/ndis' element={<Ndis />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </main>
-      <Footer />
+      <HelmetProvider>
+        <ScrollToTop />
+        <Header />
+        <main className={classNames(styles.app)}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/services/community-nursing-care" element={<NursingCare />} />
+            <Route path="/services/community-participation" element={<CommunityParticipation />} />
+            <Route path="/services/dissability-accommodation" element={<Accommodation />} />
+            <Route path="/services/independent-living" element={<IndependetLiving />} />
+            <Route path='/services/individualised-living-options' element={<LinvingOptions />} />
+            <Route path='/services/plan-management' element={<PlanManagment />} />
+            <Route path='/services/support-coordination' element={<SupportCoordination />} />
+            <Route path='/services/transport' element={<Transport />} />
+            <Route path='/ndis' element={<Ndis />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </main>
+        <Footer />
+      </HelmetProvider>
     </>
   );
 }

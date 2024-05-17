@@ -1,7 +1,7 @@
 import React, { ReactEventHandler } from 'react';
 import styles from './recLivingOptions.module.css';
 import classNames from 'classnames';
-import  imgUrl from '../../../assets/images/services/living options/Entering-the-New-House.jpg'
+import imgUrl from '../../../assets/images/services/living options/Entering-the-New-House.jpg'
 import check from '../../../assets/images/svg/check.svg';
 import checkBlack from '../../../assets/images/svg/checkBlack.svg';
 import { useSelector } from 'react-redux';
@@ -16,8 +16,8 @@ const RecLivingOptions: React.FC = () => {
             <div className={classNames(styles["cs-container"])}>
                 <div className={classNames(styles["cs-image-group"])}>
                     <div className={classNames(styles["cs-flex"])}>
-                        <picture className={classNames(styles["cs-background"],  activeGray && 'black-pic')}>
-                            <img loading="lazy" decoding="async" src={imgUrl} alt="Happy group of friends of different ethnicities is entering the new house" style={{objectPosition: 'bottom'}}/>
+                        <picture className={classNames(styles["cs-background"], activeGray && 'black-pic')}>
+                            <img loading="lazy" decoding="async" src={imgUrl} alt="Happy group of friends of different ethnicities is entering the new house" style={{ objectPosition: 'bottom' }} />
                         </picture>
 
                     </div>
@@ -25,7 +25,7 @@ const RecLivingOptions: React.FC = () => {
                 </div>
                 <div className={classNames(styles["cs-content"])}>
                     <h1 className={classNames(styles["cs-title"], "cs-title")}>
-                        Personalized Independence
+                        Support to live the way that suits you
                     </h1>
 
                     <p className={classNames("cs-text")}>
@@ -43,24 +43,20 @@ const RecLivingOptions: React.FC = () => {
 
                     <ul className={classNames(styles["cs-ul"])}>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
-                            Our job is to make your life easier.
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray ? checkBlack : check} alt="checkmark" width="24" height="24" />
+                            Strong focus on Goals and Needs
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
-                            Experience childcare as it should be.
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray ? checkBlack : check} alt="checkmark" width="24" height="24" />
+                            Personal Care & Support
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
-                            We are childcare professionals.
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray ? checkBlack : check} alt="checkmark" width="24" height="24" />
+                            Assistance with daily living needs
                         </li>
                         <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
-                            Digital Clean Checklist Prepared New Year
-                        </li>
-                        <li className={classNames(styles["cs-li"])}>
-                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray? checkBlack : check} alt="checkmark" width="24" height="24" />
-                            Babysitting with immense love and care.
+                            <img className={classNames(styles["cs-icon"])} aria-hidden="true" loading="lazy" decoding="async" src={activeGray ? checkBlack : check} alt="checkmark" width="24" height="24" />
+                            Skill Development & Training
                         </li>
                     </ul>
                     <p className={classNames("cs-text")}>

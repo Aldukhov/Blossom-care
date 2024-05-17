@@ -19,7 +19,7 @@ const OvalIndependetLiving: React.FC = () => {
                     <h1 className={classNames(styles['cs-title'], 'cs-title')}>High Intensity Supports</h1>
 
                     <p className={classNames(styles['cs-text'], 'cs-text')} >
-                        High Intensity supports have their own addition set of requirements. </p>
+                        High Intensity supports have their own additional set of requirements. </p>
 
                     <p className={classNames(styles['cs-text'], 'cs-text')} >
                         At Blossom Care, we take time to understand you, your goals, your medical situation, and daily needs.

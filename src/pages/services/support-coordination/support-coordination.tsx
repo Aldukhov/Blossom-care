@@ -4,6 +4,7 @@ import Form from '../../../components/form/Form';
 import ContentSupportCoordination from '../../../components/content-rectangle/content-support-coordination/contentSupportCoordination';
 import SSupportCoordination from '../../../components/support-coordination-page-components/content/content';
 import imgUrl from '../../../assets/images/services/support-coordination/flower boy and woman.jpg';
+import { Helmet } from 'react-helmet-async';
 
 const SupportCoordination: React.FC = () => {
 
@@ -11,12 +12,15 @@ const SupportCoordination: React.FC = () => {
     const alt = "Social inclusion - man with down syndrome working in garden"
     return (
 
-        
+
         <>
-            <Hero title={title} imageUrl={imgUrl} alt={alt}/>
-            <ContentSupportCoordination/>
-            <SSupportCoordination/> 
-            <Form/>
+            <Helmet>
+                <title>{title}</title>
+            </Helmet>
+            <Hero title={title} imageUrl={imgUrl} alt={alt} />
+            <ContentSupportCoordination />
+            <SSupportCoordination />
+            <Form />
         </>
     );
 

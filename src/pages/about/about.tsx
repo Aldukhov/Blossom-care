@@ -6,18 +6,21 @@ import ACTA from '../../components/about-page-components/cta/ACTA';
 import Stats from '../../components/about-page-components/stats/Stats';
 import Form from '../../components/form/Form';
 import imgUrl from '../../assets/images/about us/header.jpg'
-
+import { Helmet } from 'react-helmet-async';
 
 const About: React.FC = () => {
 
-    
+
     const title = "About us";
-    
+
     return (
 
 
         <>
-            <Hero title={title} imageUrl={imgUrl} alt={'header'}/>
+            <Helmet>
+                <title>{title}</title>
+            </Helmet>
+            <Hero title={title} imageUrl={imgUrl} alt={'header'} />
             <Mission />
             <ACTA />
             <Stats />

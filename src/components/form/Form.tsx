@@ -64,7 +64,7 @@ const Form: React.FC = () => {
                             </picture>
                             <div className={classNames(styles['cs-flex-group'])}>
                                 <span className={classNames(styles['cs-header'])}>Phone</span>
-                                <a href="tel:888-4565-789" className={classNames(styles['cs-link'])}>{phoneNumber}</a>
+                                <a href={`tel:${phoneNumber}`} className={classNames(styles['cs-link'])}>{phoneNumber}</a>
                             </div>
                         </li>
                         <li className={classNames(styles['cs-li'])}>
@@ -81,7 +81,7 @@ const Form: React.FC = () => {
                 </div>
                 {/* Form */}
                 <form className={classNames(styles['cs-form'])} id="cs-form" name="Contact Form" onSubmit={handleSubmit} ref={formRef}>
-                    <h3 className={classNames(styles['cs-h3'])}>Make Appointment</h3>
+                    <h3 className={classNames(styles['cs-h3'])}>Submit An Enquiry</h3>
                     <label className={classNames(styles['cs-label'])}>
                         Name
                         <input className={classNames(styles['cs-input'])} required type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Name"

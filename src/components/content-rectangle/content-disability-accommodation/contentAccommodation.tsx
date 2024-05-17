@@ -25,7 +25,7 @@ const ContentAccommodation: React.FC = () => {
                 </div>
                 <div className={classNames(styles["cs-content"])}>
                     <h1 className={classNames(styles["cs-title"], "cs-title")}>
-                    Tailored SDA: Meet Your High Needs
+                    Tailored SDA: Meet Your Needs
                     </h1>
 
                     <p className={classNames("cs-text")}>

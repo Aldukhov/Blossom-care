@@ -25,7 +25,7 @@ const ContentPlanManagment: React.FC = () => {
                 </div>
                 <div className={classNames(styles["cs-content"])}>
                     <h1 className={classNames(styles["cs-title"], "cs-title")}>
-                        NDIS Сare
+                        Full control, Hassle free
                     </h1>
 
                     <p className={classNames("cs-text")}>

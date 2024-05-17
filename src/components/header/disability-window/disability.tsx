@@ -7,7 +7,11 @@ import { setcurrentSize } from '../../../services/actions/currentSize';
 import { RootState } from '../../../services/types';
 import { fontSize, colors } from '../../../utils/constants';
 
-const Disability: React.FC = () => {
+interface DisabilityProps {
+    isActive: boolean;
+}
+
+const Disability: React.FC<DisabilityProps> = ({ isActive }) => {
 
     const dispatch = useDispatch();
     const activeGray = useSelector((state: RootState) => state.activeGray.active);
@@ -55,7 +59,7 @@ const Disability: React.FC = () => {
                 ('--contactHeader',
                     `${fontSize.contact.first += fontSize.contact.onePix}rem`);
 
-                    dispatch(setcurrentSize(activeSize+1));
+            dispatch(setcurrentSize(activeSize + 1));
         }
 
         setTimeout(() => {
@@ -102,7 +106,7 @@ const Disability: React.FC = () => {
                 ('--contactHeader',
                     `${fontSize.contact.first -= fontSize.contact.onePix}rem`);
 
-                    dispatch(setcurrentSize(activeSize-1));
+            dispatch(setcurrentSize(activeSize - 1));
         }
 
         setTimeout(() => {
@@ -114,25 +118,25 @@ const Disability: React.FC = () => {
 
         setButtonDisabled(true);
 
-            dispatch(setActiveGray(!activeGray));
+        dispatch(setActiveGray(!activeGray));
 
-            if (!activeGray) {
-                root.style.setProperty('--primary', '#666666');
-                root.style.setProperty('--secondary', '#333333');
-                root.style.setProperty('--secondaryLight', '#999999');
-                root.style.setProperty('--backgroundColor', '#CCCCCC');
+        if (!activeGray) {
+            root.style.setProperty('--primary', '#666666');
+            root.style.setProperty('--secondary', '#333333');
+            root.style.setProperty('--secondaryLight', '#999999');
+            root.style.setProperty('--backgroundColor', '#CCCCCC');
 
-            } else {
-                root.style.setProperty('--primary', `${colors.primary.color}`);
-                root.style.setProperty('--secondary', `${colors.secondary.color}`);
-                root.style.setProperty('--secondaryLight', `${colors.secondaryLight.color}`);
-                root.style.setProperty('--backgroundColor', `${colors.backgroundColor.color}`);
+        } else {
+            root.style.setProperty('--primary', `${colors.primary.color}`);
+            root.style.setProperty('--secondary', `${colors.secondary.color}`);
+            root.style.setProperty('--secondaryLight', `${colors.secondaryLight.color}`);
+            root.style.setProperty('--backgroundColor', `${colors.backgroundColor.color}`);
 
-            }
+        }
 
-            setTimeout(() => {
-                setButtonDisabled(false);
-            }, 1500); // 3 секунды
+        setTimeout(() => {
+            setButtonDisabled(false);
+        }, 1500); // 3 секунды
     };
 
     return (
@@ -149,19 +153,23 @@ const Disability: React.FC = () => {
                                 Larger Text
                             </h2>
                             <button className={styles.textToggleButton} onClick={decreaseFontSize} disabled={buttonDisabled}>
-                                -
+                                <svg width="8px" height="8px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 12L18 12" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                             </button>
                             <button className={styles.textToggleButton} onClick={increaseFontSize} disabled={buttonDisabled}>
-                                +
+                                <svg width="8px" height="8px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12H20M12 4V20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                             </button>
                         </div>
 
                     </div>
 
                     <div>
-                        <h2 className={classNames("cs-text", styles.textb)}>High Contrast</h2>
+                        <h2 className={classNames("cs-text", styles.textb)}>Grayscale</h2>
                         <label className={styles["switch"]}>
-                            <input type="checkbox" checked={activeGray} onChange={toggleContrastMode} disabled={buttonDisabled}/>
+                            <input type="checkbox" checked={activeGray} onChange={toggleContrastMode} disabled={buttonDisabled} />
                             <span className={styles["slider"]}></span>
                         </label>
                     </div>

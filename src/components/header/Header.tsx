@@ -12,13 +12,14 @@ import down from '../../assets/images/header/svg/down.svg';
 import dissability from '../../assets/images/svg/accessibility.svg';
 import Disability from './disability-window/disability';
 
+
 const Header: React.FC = () => {
 
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const [isMenuActive, setIsMenuActive] = useState(false);
     const [isToggleActive, setIsToggleActive] = useState(false);
     const activeLink = useSelector((state: RootState) => state.activeLink.activeLink);
-    const activeGray = useSelector((state:RootState) => state.activeGray.active);
+    const activeGray = useSelector((state: RootState) => state.activeGray.active);
 
     const [isDissabilityActive, setIsDissabilityActive] = useState<boolean>(false);
 
@@ -48,7 +49,6 @@ const Header: React.FC = () => {
         };
     }, []);
 
-
     const handleMenuClick = () => {
         setIsMenuActive(!isMenuActive);
     };
@@ -69,6 +69,9 @@ const Header: React.FC = () => {
         navigate(link, { replace: false });
         localStorage.setItem('activeLink', link);
         dispatch(setActiveLink(link));
+        if (isDissabilityActive) {
+            setIsDissabilityActive(!isDissabilityActive);
+        }
         if (isMenuActive) {
             setIsMenuActive(!isMenuActive);
         }
@@ -85,7 +88,7 @@ const Header: React.FC = () => {
 
                 <div className={classNames(styles["cs-container"])}>
                     <Link to="/" className={classNames(styles["cs-logo"])} aria-label="back to home" onClick={() => handleLinkClick('/')}>
-                        <img src={activeGray? logoBlack: logo} alt="logo" aria-hidden="true" decoding="async" />
+                        <img src={activeGray ? logoBlack : logo} alt="logo" aria-hidden="true" decoding="async" />
                     </Link>
 
                     <img onClick={handleDisabilityToggle} className={classNames(styles["cs-phone-icon"], styles["cs-disability-icon"])} src={dissability} alt="logo" width="24" height="24" aria-hidden="true" decoding="async" />
@@ -183,7 +186,7 @@ const Header: React.FC = () => {
                 </div>
 
 
-                {isDissabilityActive ? <Disability /> : null}
+                {isDissabilityActive ? <Disability isActive={isDissabilityActive} /> : null}
 
             </header>
 

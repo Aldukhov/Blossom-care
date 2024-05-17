@@ -34,8 +34,6 @@ const ContentOVal: React.FC = () => {
                         <a target="_blank" rel="noopener noreferrer"  href="https://www.ndis.gov.au/providers/housing-and-living-supports-and-services/specialist-disability-accommodation">SDA price & eligibility</a>
                         <br />
                         <br />
-                        <a target="_blank" rel="noopener noreferrer"  href="https://humanrights.gov.au/">Human Rights</a>
-
                     </p>
 
                 </div>

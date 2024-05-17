@@ -29,7 +29,7 @@ const ContentNursingCare: React.FC = () => {
                     </h1>
 
                     <p className={classNames("cs-text")}>
-                    Community Nursing Care offer important healthcare assistance to individuals, 
+                    Community Nursing Care offers important healthcare assistance to individuals, 
                     whether for short-term or long-term care. 
                     Our dedicated team of experienced nurses is committed to addressing individuals' 
                     unique healthcare needs and delivering personalised care based to their specific requirements. 

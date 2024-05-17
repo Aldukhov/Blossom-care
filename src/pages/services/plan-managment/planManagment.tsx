@@ -3,6 +3,7 @@ import Hero from '../../../components/hero/Hero';
 import Form from '../../../components/form/Form';
 import ContentPlanManagment from '../../../components/content-rectangle/content-plan-managment/ContentPlanManangment';
 import imgUrl from '../../../assets/images/services/plan managment/paperwrok.jpg';
+import { Helmet } from 'react-helmet-async';
 
 
 const PlanManagment: React.FC = () => {
@@ -12,11 +13,14 @@ const PlanManagment: React.FC = () => {
 
     return (
 
-        
+
         <>
-            <Hero title={title} imageUrl={imgUrl} alt={alt}/>
-            <ContentPlanManagment/>
-            <Form/>
+            <Helmet>
+                <title>{title}</title>
+            </Helmet>
+            <Hero title={title} imageUrl={imgUrl} alt={alt} />
+            <ContentPlanManagment />
+            <Form />
         </>
     );
 

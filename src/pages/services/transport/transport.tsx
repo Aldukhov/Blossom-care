@@ -3,16 +3,20 @@ import Hero from '../../../components/hero/Hero';
 import Form from '../../../components/form/Form';
 import ContentTransport from '../../../components/content-rectangle/content-transport/contentTransport';
 import imgUrl from '../../../assets/images/services/transport/senior woman exit car into wheelchair.jpg'
+import { Helmet } from 'react-helmet-async';
 
 const Transport: React.FC = () => {
 
-    const title = "Title for Page One";
+    const title = "Transport";
     const alt = 'Senior woman exits car into wheelchair, caregiver helps';
     
     return (
 
 
         <>
+        <Helmet>
+                <title>{title}</title>
+            </Helmet>
             <Hero title={title} imageUrl={imgUrl} alt = {alt}/>
             <ContentTransport />
             <Form />

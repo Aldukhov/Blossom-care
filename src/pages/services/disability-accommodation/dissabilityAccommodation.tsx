@@ -3,6 +3,7 @@ import Hero from '../../../components/hero/Hero';
 import Form from '../../../components/form/Form';
 import ContentAccommodation from '../../../components/content-rectangle/content-disability-accommodation/contentAccommodation';
 import imgUrl from '../../../assets/images/services/disability accomodation/room with tv.jpg'
+import { Helmet } from 'react-helmet-async';
 
 const Accommodation: React.FC = () => {
 
@@ -12,7 +13,10 @@ const Accommodation: React.FC = () => {
 
 
         <>
-            <Hero title={title} imageUrl={imgUrl} alt ={alt}/>
+            <Helmet>
+                <title>{title}</title>
+            </Helmet>
+            <Hero title={title} imageUrl={imgUrl} alt={alt} />
             <ContentAccommodation />
             <Form />
         </>

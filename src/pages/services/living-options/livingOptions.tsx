@@ -3,7 +3,7 @@ import RecLivingOptions from '../../../components/content-rectangle/recLivingOpt
 import Hero from '../../../components/hero/Hero';
 import Form from '../../../components/form/Form';
 import imgUrl from '../../../assets/images/services/living options/women-and-girl-smaling.jpg';
-
+import { Helmet } from 'react-helmet-async';
 
 const LinvingOptions: React.FC = () => {
 
@@ -13,6 +13,9 @@ const LinvingOptions: React.FC = () => {
 
 
         <>
+            <Helmet>
+                <title>{title}</title>
+            </Helmet>
             <Hero title={title} imageUrl={imgUrl} alt={alt} />
             <RecLivingOptions />
             <Form />

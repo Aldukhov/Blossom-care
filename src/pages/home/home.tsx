@@ -6,21 +6,24 @@ import Choose from '../../components/home-page-components/choose-us/Choose';
 import Reviews from '../../components/home-page-components/reviews/Reviews';
 import Hero from '../../components/hero/Hero';
 import heroImg from '../../assets/images/home/hands with hand.jpg';
+import { Helmet } from 'react-helmet-async';
 
 const Home: React.FC = () => {
 
-    const title = "Nurturing independence, mpowering choices & enriching lives.";
+    const title = "Nurturing independence, empowering choices & enriching lives.";
     const alt = 'Caregiver holding hands elderly woman patient, help and care';
     return (
 
 
         <>
-            
-                <Hero title={title} imageUrl={heroImg} alt={alt} />
-                <Choose />
-                <Services />
-                <CTA />
-            
+            <Helmet>
+                <title>{title}</title>
+            </Helmet>
+            <Hero title={title} imageUrl={heroImg} alt={alt} />
+            <Choose />
+            <Services />
+            <CTA />
+
         </>
     );
 

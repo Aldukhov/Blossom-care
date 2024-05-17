@@ -7,6 +7,7 @@
   .cs-disability-icon {
     z-index: 1;
   }
+
   .cs-navigation .cs-li-link.cs-active-link {
     color: var(--secondary);
   }
@@ -742,7 +743,10 @@
   display: flex;
   justify-content: center;
   gap: 15px;
+  overflow: hidden;
 }
+
+
 
 .switch {
   position: relative;
@@ -816,6 +820,7 @@ input:checked+.slider:before {
   border-radius: 5px;
   margin-right: 5px;
   cursor: pointer;
+  padding: 0;
 }
 
 .textToggleButton:focus {

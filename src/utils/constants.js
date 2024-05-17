@@ -7,7 +7,7 @@ import imgUrlTransport from '../assets/images/home/the man helps old man.jpg';
 import imgUrlCoordination from '../assets/images/home/flower boy.jpg';
 import imgUrlManagment from '../assets/images/home/iStock-1336665139.jpg';
 
-export const phoneNumber = '+1800 462 070';
+export const phoneNumber = '1800 462 070';
 export const email = 'info@blossomcds.com.au';
 
 
