@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.91a4c324.css",
-    "main.js": "/static/js/main.b2a4c074.js",
+    "main.css": "/static/css/main.5fc93130.css",
+    "main.js": "/static/js/main.8fddaca9.js",
     "static/js/787.3f7dcd2a.chunk.js": "/static/js/787.3f7dcd2a.chunk.js",
     "static/media/the girl with down syndrome works at the store..jpg": "/static/media/the girl with down syndrome works at the store..9459d7a9ece90aa781a0.jpg",
     "static/media/hands.jpg": "/static/media/hands.a19303634b725cb0afd7.jpg",
     "static/media/happy-disabled-man.jpg": "/static/media/happy-disabled-man.87d5e95b6439bd74e2d7.jpg",
-    "static/media/paperwrok.jpg": "/static/media/paperwrok.6da5aa112a7c6937d904.jpg",
     "static/media/flower boy and woman.jpg": "/static/media/flower boy and woman.2eb201c0f1f422a3b530.jpg",
     "static/media/women-and-girl-smaling.jpg": "/static/media/women-and-girl-smaling.269ad26633d0d4c9c346.jpg",
     "static/media/girl-playing-the-piano.jpg": "/static/media/girl-playing-the-piano.57cd4333f510f0efb55e.jpg",
@@ -21,7 +20,6 @@
     "static/media/Entering-the-New-House.jpg": "/static/media/Entering-the-New-House.276a79cefceef2750f26.jpg",
     "static/media/doctor with men.jpg": "/static/media/doctor with men.0db29a3a30e6738cf41c.jpg",
     "static/media/the man helps old man.jpg": "/static/media/the man helps old man.d01fa24e4a02a37b17a4.jpg",
-    "static/media/secondpaperwork.jpg": "/static/media/secondpaperwork.b8cf8aa803d08edcfe79.jpg",
     "static/media/hands holding a heart.jpg": "/static/media/hands holding a heart.773dfbe1838a76b1320b.jpg",
     "static/media/man-in-hospital.jpg": "/static/media/man-in-hospital.1e2faa8d68e214aab6a2.jpg",
     "static/media/section.jpg": "/static/media/section.5cd4dabea2eeeb88b847.jpg",
@@ -36,9 +34,11 @@
     "static/media/OpenSans-Regular.woff": "/static/media/OpenSans-Regular.362b56e7c69551249027.woff",
     "static/media/OpenSans-Bold.woff": "/static/media/OpenSans-Bold.08328bf7467540700abe.woff",
     "static/media/OpenSans-Light.woff": "/static/media/OpenSans-Light.d47c5091a7fed36bbaa7.woff",
+    "static/media/first_flag.jpg": "/static/media/first_flag.f6a3d0de76e2f4663dbe.jpg",
+    "static/media/second_flag.jpg": "/static/media/second_flag.21dca3843e7dda62932b.jpg",
     "static/media/logo_with_Shadow_black.svg": "/static/media/logo_with_Shadow_black.a25cd746666e861ab0ec02cce7280bc8.svg",
     "static/media/logo_with_Shadow.svg": "/static/media/logo_with_Shadow.41567082454261a216eb239817a93456.svg",
-    "static/media/I Heart NDIS_2020.svg": "/static/media/I Heart NDIS_2020.ae03394572041c8ef01e1d25b2c347ca.svg",
+    "static/media/I Heart NDIS_2020.svg": "/static/media/I Heart NDIS_2020.e79ba180d66d4debacfca31c7b770c14.svg",
     "static/media/instagram.svg": "/static/media/instagram.868b5733562f486d6ab5fad15fc37f4a.svg",
     "static/media/target.svg": "/static/media/target.7491f36d832b1b194c7ae42f6068dda1.svg",
     "static/media/targetBlack.svg": "/static/media/targetBlack.58603c9ec1c9fff44032528869d16748.svg",
@@ -60,12 +60,12 @@
     "static/media/down.svg": "/static/media/down.837875f996185e3a02f6c748aca7e17b.svg",
     "static/media/location-pin-alt-svgrepo-com.svg": "/static/media/location-pin-alt-svgrepo-com.ccef8bdb074cd0b93e526dd339123d60.svg",
     "static/media/locationBlack.svg": "/static/media/locationBlack.276bb6b7f6bb36fbf1f327bb875bb710.svg",
-    "main.91a4c324.css.map": "/static/css/main.91a4c324.css.map",
-    "main.b2a4c074.js.map": "/static/js/main.b2a4c074.js.map",
+    "main.5fc93130.css.map": "/static/css/main.5fc93130.css.map",
+    "main.8fddaca9.js.map": "/static/js/main.8fddaca9.js.map",
     "787.3f7dcd2a.chunk.js.map": "/static/js/787.3f7dcd2a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.91a4c324.css",
-    "static/js/main.b2a4c074.js"
+    "static/css/main.5fc93130.css",
+    "static/js/main.8fddaca9.js"
   ]
 }
