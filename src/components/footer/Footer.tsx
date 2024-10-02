@@ -15,6 +15,7 @@ import logo from '../../assets/images/svg/logo_with_Shadow.svg'
 import facebookSvg from '../../assets/images/svg/facebook.svg'
 import instagramSvg from '../../assets/images/svg/instagram.svg'
 import logoBlack from '../../assets/images/svg/logo_with_Shadow_black.svg'
+import wwtLogo from '../../assets/images/svg/wwtround.svg'
 
 const Footer: React.FC = () => {
 	const activeGray = useSelector((state: RootState) => state.activeGray.active)
@@ -71,6 +72,25 @@ const Footer: React.FC = () => {
 						/>
 					</Link>
 					<div className={styles['cs-social']}>
+						<a
+							className={classNames(
+								styles['cs-social-link'],
+								styles['cs-ndis']
+							)}
+							aria-label='visit Web Ways Tech'
+							href='https://webwaystech.com.au/'
+						>
+							<img
+								className={styles['cs-social-img']}
+								aria-hidden='true'
+								loading='lazy'
+								decoding='async'
+								src={wwtLogo}
+								alt='Web Ways Tech'
+								width='11'
+								height='11'
+							/>
+						</a>
 						<a
 							className={styles['cs-social-link']}
 							aria-label='visit facebook profile'

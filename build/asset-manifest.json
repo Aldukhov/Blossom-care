@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5fc93130.css",
-    "main.js": "/static/js/main.8fddaca9.js",
+    "main.js": "/static/js/main.a599cc24.js",
     "static/js/787.3f7dcd2a.chunk.js": "/static/js/787.3f7dcd2a.chunk.js",
     "static/media/the girl with down syndrome works at the store..jpg": "/static/media/the girl with down syndrome works at the store..9459d7a9ece90aa781a0.jpg",
     "static/media/hands.jpg": "/static/media/hands.a19303634b725cb0afd7.jpg",
@@ -24,6 +24,7 @@
     "static/media/man-in-hospital.jpg": "/static/media/man-in-hospital.1e2faa8d68e214aab6a2.jpg",
     "static/media/section.jpg": "/static/media/section.5cd4dabea2eeeb88b847.jpg",
     "static/media/Sydney.jpg": "/static/media/Sydney.7076bbb5027be2f42a12.jpg",
+    "static/media/wwtround.svg": "/static/media/wwtround.dcf894fadd589a2e0dce230aeea81b26.svg",
     "static/media/women-sitting-in-a-cafe.jpg": "/static/media/women-sitting-in-a-cafe.c74f8c892dba5a4d819c.jpg",
     "static/media/a boy with down syndrome holding a dog.jpg": "/static/media/a boy with down syndrome holding a dog.83a951592ff0f08d9ec8.jpg",
     "static/media/iStock-1336665139.jpg": "/static/media/iStock-1336665139.17699241bf6bad9cd65a.jpg",
@@ -61,11 +62,11 @@
     "static/media/location-pin-alt-svgrepo-com.svg": "/static/media/location-pin-alt-svgrepo-com.ccef8bdb074cd0b93e526dd339123d60.svg",
     "static/media/locationBlack.svg": "/static/media/locationBlack.276bb6b7f6bb36fbf1f327bb875bb710.svg",
     "main.5fc93130.css.map": "/static/css/main.5fc93130.css.map",
-    "main.8fddaca9.js.map": "/static/js/main.8fddaca9.js.map",
+    "main.a599cc24.js.map": "/static/js/main.a599cc24.js.map",
     "787.3f7dcd2a.chunk.js.map": "/static/js/787.3f7dcd2a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5fc93130.css",
-    "static/js/main.8fddaca9.js"
+    "static/js/main.a599cc24.js"
   ]
 }
