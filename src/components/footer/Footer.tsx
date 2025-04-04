@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
 						<a
 							className={styles['cs-social-link']}
 							aria-label='visit instagram profile'
-							href='https://www.instagram.com/bloss_omcr?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr'
+							href='https://www.instagram.com/blossomcare_disabilityservices/#'
 						>
 							<img
 								className={styles['cs-social-img']}

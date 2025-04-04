@@ -11,6 +11,7 @@ import logoBlack from '../../assets/images/svg/logo_with_Shadow_black.svg'
 import down from '../../assets/images/header/svg/down.svg'
 import dissability from '../../assets/images/svg/accessibility.svg'
 import Disability from './disability-window/disability'
+import ndisSvg from '../../assets/images/svg/I Heart NDIS_2020.svg'
 
 const Header: React.FC = () => {
 	const [isScrolled, setIsScrolled] = useState<boolean>(false)
@@ -96,6 +97,26 @@ const Header: React.FC = () => {
 							alt='logo'
 							aria-hidden='true'
 							decoding='async'
+						/>
+					</Link>
+
+					<Link
+						className={classNames(
+							styles['cs-phone-icon'],
+							styles['cs-disability-icon'],
+							styles['cs-ndis-icon']
+						)}
+						aria-label='visit ndis profile'
+						to='/ndis'
+					>
+						<img
+							aria-hidden='true'
+							loading='lazy'
+							decoding='async'
+							src={ndisSvg}
+							alt='ndis'
+							width='24'
+							height='24'
 						/>
 					</Link>
 
